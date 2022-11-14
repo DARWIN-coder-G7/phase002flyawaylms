@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+    body {
+      background-image: url('https://wallpaperaccess.com/full/445682.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <form action = "Userdetails">
+    <label style="background-color:white; color:black; border:3px solid blue">NAME</label><input type="text" name="uname" required></br></br>
+    <label style="background-color:white; color:black; border:3px solid blue">NATIONALITY</label><input type="text" name="country">
+    </br></br>
+    <label>GENDER</label></br>
+      <input type="radio" id="male" name="GENDER" value="MALE">
+      <label for="male">MALE</label>
+      <input type="radio" id="female" name="GENDER" value="FEMALE">
+      <label for="female">FEMALE</label>
+      <input type="radio" id="other" name="GENDER" value="OTHER">
+      <label for="other">OTHER</label><br><br>
+    <label style="background-color:white; color:black; border:3px solid blue">AGE</label><input type="number" name="age">
+    </br></br>
+    <label for="purpose" style="background-color:white;border:3px solid blue">REASON FOR TRAVEL</label>
+    <select name="purpose" id="reason">
+      <option value="tourism">TOUR</option>
+      <option value="buisness">BUISNESS</option>
+      <option value="study">STUDY</option>
+      <option value="work">WORK</option>
+      <option value="medical">MEDICAL</option>
+    </select>
+    </br></br><label style="background-color:white; color:black; border:3px solid blue">PHONE NO</label><input type="tel" id="phone" name="phone" placeholder="mobile num" pattern="[0-9]{10}" required>
+  <small>Format: 10 digit</small>
+  <br><br>
+    <label style="background-color:white; color:black; border:3px solid blue">EMAIL ID</label><input type="email" name="email">
+    </br></br>
+    <label style="background-color:white; color:black; border:3px solid blue">PASSPORT ID</label> <input type="TEXT" id="phone" name="pport" placeholder="PXQM87562233" pattern="[A-Z]{4}[0-9]{8}" required>
+  <small>Format: ABCD12345678</small>
+    </br></br>
+    <label style="background-color:white; color:black; border:3px solid blue">ADDRESS</label><input style="width:400px; height:100px" type="text" name="address"> </br></br>
+    <center>
+      <input "border:7px solid blue;" type="submit" value="REGISTER">
+    </center>
+  </form>
+</body>
+</html>
