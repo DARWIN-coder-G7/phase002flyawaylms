@@ -35,6 +35,8 @@ public class fwlogin extends HttpServlet {
 		String username = request.getParameter("id");
 		String password = request.getParameter("pass");
 		PrintWriter out = response.getWriter();
+		 response.setContentType("text/html");
+		 out.println("<html><body>");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/flyaway","root","root");
@@ -48,6 +50,7 @@ while(rs.next()) {
 	else {out.print("<h5 style='color:red'>Sorry InValid Credentials....!</h5>");
 	RequestDispatcher rd=request.getRequestDispatcher("adminlogin.html");
 	rd.include(request, response);}
+	out.println("</body></html>");
 	
 }
 stmt.close();

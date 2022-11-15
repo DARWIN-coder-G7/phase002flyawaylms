@@ -51,7 +51,6 @@ public class Userentry extends HttpServlet {
 		 HttpSession session=request.getSession();
 		 session.setAttribute("pcount", count);
 		response.setContentType("text/html");
-		//out.println("<html><body>");
 		 out.println("<html> <head>\r\n"
 				+ "<style>\r\n"
 				+ "body {\r\n"

@@ -40,21 +40,9 @@ public class forward extends HttpServlet {
 		System.out.println("ticket id for price"+full);
 		System.out.println("persons count at forward.java"+percount);
 		
-		
-		//ArrayList<Integer> al=new ArrayList<Integer>(); 
-		//al = (ArrayList<Integer>) request.getSession().getAttribute("fid");
-		//System.out.println(al.get(0));
-		//System.out.println(al.get(1));
-		//System.out.println(al.get(2));
 		ArrayList<Integer> priceof=new ArrayList<Integer>(); 
 		priceof = (ArrayList<Integer>) request.getSession().getAttribute("ticketprice");
-		System.out.println(priceof.get(0));
-		System.out.println(priceof.get(1));
-		System.out.println(priceof.get(2));
-	int size = priceof.size();
-	System.out.println(size);
-		System.out.println(percount);
-		System.out.println(full);
+	   int size = priceof.size();
 		if( full<= size) {
 		if(full != 0) {
 			int m = full-1;
@@ -66,9 +54,7 @@ public class forward extends HttpServlet {
 	     RequestDispatcher rd=request.getRequestDispatcher("regentry.html");  
 	     rd.forward(request, response);  
 	        out.println(result);
-	        //out.println(full);
-	        //out.println(percount);
-			//
+	        
 
 		}
 		}
@@ -88,9 +74,6 @@ public class forward extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	
 
 }
