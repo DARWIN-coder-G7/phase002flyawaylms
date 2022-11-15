@@ -30,9 +30,11 @@ public class Userdetails extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 HttpSession session=request.getSession(false);
 			PrintWriter out = response.getWriter();
+			response.setContentType("text/html");
+			out.println("<html><body>");
 		String uname = request.getParameter("uname");
 		String cname = request.getParameter("country");
 		String phone = request.getParameter("phone");
@@ -66,17 +68,21 @@ public class Userdetails extends HttpServlet {
 			System.out.println();
 			System.out.println("DATA INSERTED SUCESSFULLY");
 		
-		}catch(Exception e) {System.err.println(e);}
+		}catch(Exception e) {System.err.println(e);
+out.println("<center><h2>OOPS! SOMETHING WENT WRONG</h2>\r\n"
+		+ "  </br></br>\r\n"
+		+ "<h3>NOTE</h3>\r\n"
+		+ "<h5 style = \"color:red;\">1.PHONE NUMBER AND PASSPORT ID NEED TO BE UNIQUE FOR EACH PERSON </h5>\r\n"
+		+ "</center>");
+out.print("click here to goto <a href = 'regentry.html' >goback</a>");
+		}
 			  
-		out.print("click here to goto <a href = 'addflights.html' >goback</a>");
+	
+		out.println("</body></html>");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+	
 }

@@ -80,7 +80,7 @@ public class forward extends HttpServlet {
 				+ "<h5 style = \"color:red;\">1.PLEASE SELECT A VALID FLIGHT NUMBER</h5>\r\n"
 				+ "</center>");
 		out.println("</body></html>");
-		out.print("<h2>CLICK HERE TO <a href = \"userentry.html\">GO BACK</a></h2>");
+		out.print("<h2>CLICK HERE TO <a href = \"useentry.html\">GO BACK</a></h2>");
 	}
 
 

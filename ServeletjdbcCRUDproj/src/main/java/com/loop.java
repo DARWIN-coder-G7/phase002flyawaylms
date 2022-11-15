@@ -31,7 +31,16 @@ public class loop extends HttpServlet {
 		HttpSession session=request.getSession(false);
         PrintWriter out = response.getWriter();	
         response.setContentType("text/html");
-		out.println("<html><body>");
+		out.println("<html><head>\r\n"
+				+ "<style>\r\n"
+				+ "body {\r\n"
+				+ "  background-image: url('https://c4.wallpaperflare.com/wallpaper/171/914/407/animals-digital-art-pumas-minimalism-wallpaper-preview.jpg');\r\n"
+				+ "  background-repeat: no-repeat;\r\n"
+				+ "  background-attachment: fixed; \r\n"
+				+ "  background-size: 100% 100%;\r\n"
+				+ "}\r\n"
+				+ "</style>\r\n"
+				+ "</head><body>");
 
 		String pcount =(String)session.getAttribute("pcount");
 		int percount = Integer.parseInt(pcount);
@@ -40,9 +49,14 @@ public class loop extends HttpServlet {
 
 		int i =1;
 		if(i< percount) {
+			out.print("<center>");
 			out.println("<a href = \"regentry.html\">CLICK HERE TO ENTER THE DETAILS OF NEXT PERSON</a>");i++;
 			out.println("</br></br></br>");
 			out.println("<a href = \"ticketpriceconfirm\">CLICK HERE TO BOOK TICKET</a>");
+			out.print("</br></br><h4>ENJOY THE WORLD'S FASTEST TRAVEL WITH US</h4>\r\n"
+					+ "");
+			out.print("</center>");
+			out.print("</body></html>");
 		}else {RequestDispatcher rd=request.getRequestDispatcher("ticketpriceconfirm");  
         rd.forward(request, response);  }
 	}
